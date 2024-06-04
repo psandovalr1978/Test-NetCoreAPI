@@ -1,0 +1,103 @@
+# Compiled object files
+*.o
+*.obj
+*.exe
+*.pdb
+*.dll
+*.ilk
+*.lib
+*.ndb
+*.idb
+*.log
+
+# Backup & snapshot files
+*.bak
+*.swp
+*.swo
+*~
+
+# Azure
+.terraform
+*.tfstate
+*.tfstate.*
+
+# Rider
+.idea/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Npm packages
+node_modules/
+
+# Environment variables
+.env
+
+# Bower dependency directory
+bower_components/
+
+# Bundle output folder
+wwwroot/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Docker Images
+*.tar
+*.img
+
+# .NET Core directories
+bin/
+obj/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Database files
+*.mdf
+*.ldf
+*.ndf
+
+# Dotnet libraries
+**/lib/
