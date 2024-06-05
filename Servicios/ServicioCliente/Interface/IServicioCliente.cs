@@ -10,6 +10,8 @@ namespace Test.Servicios.ServicioCliente.Interface
     {
         public Task<PaginacionDto<ClienteOutputDto>> GetClientes(PaginacionInputDto pg);
 
+        public Task<List<ClienteOutputDto>> GetClientes();
+
         public Task<bool> SetClente(ClienteInputDto clie);
 
         public Task<bool> UpDateClente(ClienteUpdDateDto clie);

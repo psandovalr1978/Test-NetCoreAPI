@@ -19,8 +19,14 @@ namespace Test.Controllers
             _servicio = servicio;
         }
 
-        [HttpPost("ObtenerClientes")]
-        public async Task<ActionResult<PaginacionDto<ClienteOutputDto>>> ObtenerClientes(PaginacionInputDto pg)
+        [HttpGet("ObtenerClientes")]
+        public async Task<ActionResult<List<ClienteOutputDto>>> ObtenerClientes()
+        {
+            return await _servicio.GetClientes();
+        }
+
+        [HttpPost("ListarClientesPorPaginacion")]
+        public async Task<ActionResult<PaginacionDto<ClienteOutputDto>>> ListarClientesPaginacion(PaginacionInputDto pg)
         {
             return await _servicio.GetClientes(pg);
         }

@@ -1,0 +1,38 @@
+2024-06-05 15:01:38.776 -04:00 [INF] Inicia la aplicación: "2024-06-05T15:01:38.7696550-04:00"
+2024-06-05 15:01:38.860 -04:00 [INF] Now listening on: http://localhost:5144
+2024-06-05 15:01:38.862 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-05 15:01:38.862 -04:00 [INF] Hosting environment: Development
+2024-06-05 15:01:38.863 -04:00 [INF] Content root path: /Users/paulo/Documents/VariosProyectos/Test
+2024-06-05 15:01:42.965 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/ - null null
+2024-06-05 15:01:43.040 -04:00 [WRN] Failed to determine the https port for redirect.
+2024-06-05 15:01:43.054 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/ - 404 0 null 91.6735ms
+2024-06-05 15:01:43.058 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5144/, Response status code: 404
+2024-06-05 15:02:01.385 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/swagger/index.html - null null
+2024-06-05 15:02:01.425 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/swagger/index.html - 200 null text/html;charset=utf-8 40.5328ms
+2024-06-05 15:02:01.483 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/swagger/v1/swagger.json - null null
+2024-06-05 15:02:01.543 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.6971ms
+2024-06-05 15:02:15.855 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/api/Clientes/ObtenerClientes - null null
+2024-06-05 15:02:15.864 -04:00 [INF] Executing endpoint 'Test.Controllers.ClientesController.ObtenerClientes (Test)'
+2024-06-05 15:02:15.900 -04:00 [INF] Route matched with {action = "ObtenerClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Test.DTO.ClienteOutputDto]]] ObtenerClientes() on controller Test.Controllers.ClientesController (Test).
+2024-06-05 15:02:16.637 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Nombre", "c"."Apellido", "c"."Rut", "c"."Direccion", "c"."Telefono", "c"."Email"
+FROM "Cliente" AS "c"
+2024-06-05 15:02:16.649 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Test.DTO.ClienteOutputDto, Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-05 15:02:16.656 -04:00 [INF] Executed action Test.Controllers.ClientesController.ObtenerClientes (Test) in 753.5722ms
+2024-06-05 15:02:16.656 -04:00 [INF] Executed endpoint 'Test.Controllers.ClientesController.ObtenerClientes (Test)'
+2024-06-05 15:02:16.659 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/api/Clientes/ObtenerClientes - 200 null application/json; charset=utf-8 804.2234ms
+2024-06-05 15:02:47.686 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5144/api/Clientes/ListarClientesPorPaginacion - application/json 43
+2024-06-05 15:02:47.698 -04:00 [INF] CORS policy execution successful.
+2024-06-05 15:02:47.704 -04:00 [INF] Executing endpoint 'Test.Controllers.ClientesController.ListarClientesPaginacion (Test)'
+2024-06-05 15:02:47.718 -04:00 [INF] Route matched with {action = "ListarClientesPaginacion", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Test.DTO.PaginacionDto`1[Test.DTO.ClienteOutputDto]]] ListarClientesPaginacion(Test.DTO.PaginacionInputDto) on controller Test.Controllers.ClientesController (Test).
+2024-06-05 15:02:47.769 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-06-05 15:02:47.769 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-06-05 15:02:47.776 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."ClienteId", "c"."Rut", "c"."Nombre", "c"."Apellido", "c"."Direccion", "c"."Email", "c"."Telefono"
+FROM "Cliente" AS "c"
+LIMIT @__p_1 OFFSET @__p_0
+2024-06-05 15:02:47.777 -04:00 [INF] Executing ObjectResult, writing value of type 'Test.DTO.PaginacionDto`1[[Test.DTO.ClienteOutputDto, Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-05 15:02:47.778 -04:00 [INF] Executed action Test.Controllers.ClientesController.ListarClientesPaginacion (Test) in 60.0441ms
+2024-06-05 15:02:47.779 -04:00 [INF] Executed endpoint 'Test.Controllers.ClientesController.ListarClientesPaginacion (Test)'
+2024-06-05 15:02:47.779 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5144/api/Clientes/ListarClientesPorPaginacion - 200 null application/json; charset=utf-8 92.7077ms
+2024-06-05 15:02:59.284 -04:00 [INF] Application is shutting down...

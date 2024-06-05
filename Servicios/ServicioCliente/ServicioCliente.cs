@@ -43,6 +43,19 @@ namespace Test.Servicios.ServicioCliente
             };
         }
 
+        public async Task<List<ClienteOutputDto>> GetClientes()
+        {
+            var res = await _cn.Cliente.Select(x=> new ClienteOutputDto{
+                Nombre = x.Nombre,
+                Apellido = x.Apellido,
+                Rut = x.Rut,
+                Direccion = x.Direccion,
+                Telefono = x.Telefono,
+                Email = x.Email
+            }).ToListAsync();
+            return res;
+        }
+
         public async Task<bool> SetClente(ClienteInputDto clie)
         {
 
