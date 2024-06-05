@@ -26,7 +26,7 @@ try
     builder.Services.AddDbContext<ContextoBD>(op => op.UseSqlite(conexion));
 
     // Se agrega el middleware de manejo de errores
-    builder.Services.AddScoped<ManejoErrorMiddleWare>();
+    builder.Services.AddScoped<ManejoErrorMiddleware>();
 
     // Se agregan servicios
     builder.Services.AddTransient<IServicioCliente, ServicioCliente>();
@@ -61,7 +61,7 @@ try
 
     app.UseCors("AllowAllOrigins");
 
-    app.UseMiddleware<ManejoErrorMiddleWare>();
+    app.UseMiddleware<ManejoErrorMiddleware>();
 
     app.UseAuthorization();
 
