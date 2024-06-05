@@ -20,15 +20,15 @@ namespace Test.MiddleWareError
                 context.Response.StatusCode = StatusCodes.Status500InternalServerError;
                 context.Response.ContentType = "application/json";
 
-                var errorDetails = GetError(ex);
+                var detallesError = GetError(ex);
 
                 var respuestaError = new
                 {
                     error = ex.Message,
-                    detalles = errorDetails
+                    detalles = detallesError
                 };
 
-                Log.Fatal(ex, "Detalles del error: {ErrorDetails}", errorDetails);
+                Log.Fatal(ex, "Detalles del error: {ErrorDetails}", detallesError);
 
                 string jsonResponse = JsonConvert.SerializeObject(respuestaError);
                 await context.Response.WriteAsync(jsonResponse);
