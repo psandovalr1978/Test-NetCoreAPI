@@ -1,0 +1,61 @@
+2024-06-04 21:34:03.232 -04:00 [INF] Inicia la aplicación: "2024-06-04T21:34:03.2256780-04:00"
+2024-06-04 21:34:03.314 -04:00 [INF] Now listening on: http://localhost:5144
+2024-06-04 21:34:03.315 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 21:34:03.316 -04:00 [INF] Hosting environment: Development
+2024-06-04 21:34:03.316 -04:00 [INF] Content root path: /Users/paulo/Documents/VariosProyectos/Test
+2024-06-04 21:34:40.260 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/swagger/index.html - null null
+2024-06-04 21:34:40.324 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/swagger/index.html - 200 null text/html;charset=utf-8 64.2857ms
+2024-06-04 21:34:40.413 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/swagger/v1/swagger.json - null null
+2024-06-04 21:34:40.466 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 52.6274ms
+2024-06-04 21:34:49.928 -04:00 [INF] Application is shutting down...
+2024-06-04 21:35:35.488 -04:00 [INF] Inicia la aplicación: "2024-06-04T21:35:35.4801090-04:00"
+2024-06-04 21:35:35.568 -04:00 [INF] Now listening on: http://localhost:5144
+2024-06-04 21:35:35.570 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 21:35:35.570 -04:00 [INF] Hosting environment: Development
+2024-06-04 21:35:35.570 -04:00 [INF] Content root path: /Users/paulo/Documents/VariosProyectos/Test
+2024-06-04 21:35:40.558 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/swagger/index.html - null null
+2024-06-04 21:35:40.618 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/swagger/index.html - 200 null text/html;charset=utf-8 61.0188ms
+2024-06-04 21:35:40.683 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/swagger/v1/swagger.json - null null
+2024-06-04 21:35:40.736 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 53.3842ms
+2024-06-04 21:35:56.165 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5144/api/Clientes/ObtenerClientes - application/json 44
+2024-06-04 21:35:56.180 -04:00 [WRN] Failed to determine the https port for redirect.
+2024-06-04 21:35:56.185 -04:00 [INF] CORS policy execution successful.
+2024-06-04 21:35:56.197 -04:00 [INF] Executing endpoint 'Test.Controllers.ClientesController.ObtenerClientes (Test)'
+2024-06-04 21:35:56.229 -04:00 [INF] Route matched with {action = "ObtenerClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Test.DTO.PaginacionDto`1[Test.DTO.ClienteOutputDto]]] ObtenerClientes(Test.DTO.PaginacionInputDto) on controller Test.Controllers.ClientesController (Test).
+2024-06-04 21:35:56.695 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-06-04 21:35:56.696 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-06-04 21:35:56.753 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."ClienteId", "c"."Rut", "c"."Nombre", "c"."Apellido", "c"."Direccion", "c"."Email", "c"."Telefono"
+FROM "Cliente" AS "c"
+LIMIT @__p_1 OFFSET @__p_0
+2024-06-04 21:35:56.765 -04:00 [INF] Executing ObjectResult, writing value of type 'Test.DTO.PaginacionDto`1[[Test.DTO.ClienteOutputDto, Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 21:35:56.773 -04:00 [INF] Executed action Test.Controllers.ClientesController.ObtenerClientes (Test) in 541.4737ms
+2024-06-04 21:35:56.773 -04:00 [INF] Executed endpoint 'Test.Controllers.ClientesController.ObtenerClientes (Test)'
+2024-06-04 21:35:56.776 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5144/api/Clientes/ObtenerClientes - 200 null application/json; charset=utf-8 610.6335ms
+2024-06-04 21:36:25.476 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5144/api/Clientes/ObtenerClientes - application/json 43
+2024-06-04 21:36:25.480 -04:00 [INF] CORS policy execution successful.
+2024-06-04 21:36:25.480 -04:00 [INF] Executing endpoint 'Test.Controllers.ClientesController.ObtenerClientes (Test)'
+2024-06-04 21:36:25.481 -04:00 [INF] Route matched with {action = "ObtenerClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Test.DTO.PaginacionDto`1[Test.DTO.ClienteOutputDto]]] ObtenerClientes(Test.DTO.PaginacionInputDto) on controller Test.Controllers.ClientesController (Test).
+2024-06-04 21:36:25.509 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."ClienteId", "c"."Rut", "c"."Nombre", "c"."Apellido", "c"."Direccion", "c"."Email", "c"."Telefono"
+FROM "Cliente" AS "c"
+LIMIT @__p_1 OFFSET @__p_0
+2024-06-04 21:36:25.510 -04:00 [INF] Executing ObjectResult, writing value of type 'Test.DTO.PaginacionDto`1[[Test.DTO.ClienteOutputDto, Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 21:36:25.510 -04:00 [INF] Executed action Test.Controllers.ClientesController.ObtenerClientes (Test) in 26.0277ms
+2024-06-04 21:36:25.510 -04:00 [INF] Executed endpoint 'Test.Controllers.ClientesController.ObtenerClientes (Test)'
+2024-06-04 21:36:25.510 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5144/api/Clientes/ObtenerClientes - 200 null application/json; charset=utf-8 34.1482ms
+2024-06-04 21:36:35.526 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5144/api/Clientes/ObtenerClientes - application/json 43
+2024-06-04 21:36:35.529 -04:00 [INF] CORS policy execution successful.
+2024-06-04 21:36:35.531 -04:00 [INF] Executing endpoint 'Test.Controllers.ClientesController.ObtenerClientes (Test)'
+2024-06-04 21:36:35.531 -04:00 [INF] Route matched with {action = "ObtenerClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Test.DTO.PaginacionDto`1[Test.DTO.ClienteOutputDto]]] ObtenerClientes(Test.DTO.PaginacionInputDto) on controller Test.Controllers.ClientesController (Test).
+2024-06-04 21:36:35.584 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-06-04 21:36:35.584 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-06-04 21:36:35.586 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."ClienteId", "c"."Rut", "c"."Nombre", "c"."Apellido", "c"."Direccion", "c"."Email", "c"."Telefono"
+FROM "Cliente" AS "c"
+LIMIT @__p_0 OFFSET @__p_0
+2024-06-04 21:36:35.586 -04:00 [INF] Executing ObjectResult, writing value of type 'Test.DTO.PaginacionDto`1[[Test.DTO.ClienteOutputDto, Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 21:36:35.586 -04:00 [INF] Executed action Test.Controllers.ClientesController.ObtenerClientes (Test) in 54.9822ms
+2024-06-04 21:36:35.587 -04:00 [INF] Executed endpoint 'Test.Controllers.ClientesController.ObtenerClientes (Test)'
+2024-06-04 21:36:35.587 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5144/api/Clientes/ObtenerClientes - 200 null application/json; charset=utf-8 61.1693ms
+2024-06-04 21:40:44.257 -04:00 [INF] Application is shutting down...

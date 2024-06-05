@@ -11,6 +11,5 @@ namespace Test.DTO
 
         public int CantidadRegistros { get; set; } = 10;
 
-        public int TotalRegistros { get; set; } = 0;
     }
 }

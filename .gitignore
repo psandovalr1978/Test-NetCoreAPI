@@ -101,3 +101,5 @@ artifacts/
 
 # Dotnet libraries
 **/lib/
+base.db-shm
+base.db-wal
